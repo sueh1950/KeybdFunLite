@@ -23,24 +23,33 @@
 	<plugin name="cordova-plugin-media" source="npm" spec="2.4.1" />
 	<plugin name="cordova-plugin-device" source="npm" spec="1.1.4"  />  
 	
-<gap:config-file platform="android" parent="/manifest" mode="delete">
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-</gap:config-file>
+<edit-config file="AndroidManifest.xml" target="/manifest/uses-permission[@android:name='android.permission.WRITE_EXTERNAL_STORAGE']" mode="merge">
+       <uses-permission android:name="android.permission.STATUS_BAR" />
+</edit-config>
+<edit-config file="AndroidManifest.xml" target="/manifest/uses-permission[@android:name='android.permission.RECORD_AUDIO']" mode="merge">
+       <uses-permission android:name="android.permission.STATUS_BAR" />
+</edit-config>
+<edit-config file="AndroidManifest.xml" target="/manifest/uses-permission[@android:name='android.permission.MODIFY_AUDIO_SETTINGS']" mode="merge">
+       <uses-permission android:name="android.permission.STATUS_BAR" />
+</edit-config>	
+<edit-config file="AndroidManifest.xml" target="/manifest/uses-permission[@android:name='android.permission.READ_PHONE_STATE']" mode="merge">
+       <uses-permission android:name="android.permission.STATUS_BAR" />
+</edit-config>
+<edit-config file="AndroidManifest.xml" target="/manifest/uses-permission[@android:name='android.permission.INTERNET']" mode="merge">
+       <uses-permission android:name="android.permission.STATUS_BAR" />
+</edit-config>
     <preference name="permissions" value="none"/>
 <!--android.permission.RECORD_AUDIO, android.permission.READ_PHONE_STATE-->
 
-    <preference name="phonegap-version" value="cli-6.5.0" />	<!-- was cli-6.5.0-->
+    <preference name="phonegap-version" value="cli-7.0.1" />	<!-- was cli-6.5.0-->
 	<preference name='pgb-builder-version' value='2' />   
-   <preference name="orientation" value="both" />
+   <preference name="orientation" value="unspecified" />
     <preference name="fullscreen" value="true" />
     <preference name="android-versionCode" value="0.0.2" />
 	<preference name="target-device" value="tablet" />
 	
     <preference name="android-build-tool" value="ant|gradle" />
-    <preference name="android-minSdkVersion" value="10" />
+    <preference name="android-minSdkVersion" value="16" />
     <preference name="android-targetSdkVersion" value="12" />
     <preference name="android-installLocation" value="auto" />
     <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
