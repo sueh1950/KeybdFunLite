@@ -2,46 +2,39 @@ var settings = {};
  
  
 function setDefaults(){
-
- var d = new Date();
-setData("qwerty",true);
-setData("firstTime",d.getTime());
-setData("settingsChanged", false); 
-setData("audioCue", true);
-setData("bodyColor","white");
-setData("bigKeys",false);
-setData("standard",true);
-setData("CC",false);
-
-setData("beep",true);
-setData("caps","caps/");
-setData("dataCollection","No Data");
-setData("hide",false);
-setData("promptColor","fuchsia");
-setData("prompt",true);
-setData("jump",false);
-setData("lang","en");
-setData("timer","2");
-setData("left_right",false);
-setData("leftColor","green");
-setData("lIndex","1");
-setData("rightColor","red");
- setData("lineColor1","white");
- setData("lineColor2","white");
- setData("lineColor3","white");
- setData("lineColor0","white");
- setData("sayLetter",false);
-setData("sayKBLetter",false);
-
-
+	var d = new Date();
+	setData("qwerty",true);
+	setData("firstTime",d.getTime());
+	setData("settingsChanged", false); 
+	setData("audioCue", true);
+	setData("bodyColor","white");
+	setData("bigKeys",false);
+	setData("standard",true);
+	setData("CC",false);
+	setData("beep",true);
+	setData("caps","caps/");
+	setData("dataCollection","No Data");
+	setData("hide",false);
+	setData("promptColor","fuchsia");
+	setData("prompt",true);
+	setData("jump",false);
+	setData("lang","en");
+	setData("timer","2");
+	setData("left_right",false);
+	setData("leftColor","green");
+	setData("lIndex","1");
+	setData("rightColor","red");
+	setData("lineColor1","white");
+	setData("lineColor2","white");
+	setData("lineColor3","white");
+	setData("lineColor0","white");
+	setData("sayLetter",false);
+	setData("sayKBLetter",false);
 }
 
 function getSettings(){
-	var x;
-	
- 
+	var x; 
 	setDefaults();
- console.log("lines", lines);
  
 	if (getBoolean("qwerty")==true){ 	
 		doQwerty();

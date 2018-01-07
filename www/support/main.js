@@ -215,7 +215,7 @@ function setButtons() {
 		
 }
 function doLang() {
-	lang = getData("lang");
+
 	if (lang =="en") {
 		lang= "es";
 		document.getElementById("lang").innerHTML = "Espa&ntilde;ol";
