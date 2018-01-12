@@ -282,18 +282,19 @@ function playSound(snd){
 
 	//s = snd;
 	s = getMediaURL(snd); // add android prefix to filename if necessary
-		
-	var my_media= new Media(s,
-            // success callback
-             function () { //console.log("playAudio():Audio Success");
-			 },
-            // error callback
-             function (err) { console.log("playAudio():Audio Error: " + err.code +":" + err.message); }
-    );
-	// Play audio 
-	my_media.play();
-	//release the object
-	setTimeout(function(){ my_media.release(); }, 4*1000);
+	try {	
+		var my_media= new Media(s,
+				// success callback
+				function () { //console.log("playAudio():Audio Success");
+				},
+				// error callback
+				function (err) { console.log("playAudio():Audio Error: " + err.code +":" + err.message); }
+		);
+		// Play audio 
+		my_media.play();
+		//release the object
+		setTimeout(function(){ my_media.release(); }, 4*1000);
+	} catch (err) {console.log("media error");}
 }
 function soundKey(event){
 	var s=event.target.id; //= 'imgx'
