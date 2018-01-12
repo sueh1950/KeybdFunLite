@@ -41,9 +41,9 @@
     <preference name="permissions" value="none"/>
 <!--android.permission.RECORD_AUDIO, android.permission.READ_PHONE_STATE-->
 
-    <preference name="phonegap-version" value="cli-7.0.1" />	<!-- was cli-6.5.0-->
+    <preference name="phonegap-version" value="cli-7.1.0" />	<!-- was cli-6.5.0-->
 	<preference name='pgb-builder-version' value='2' />   
-   <preference name="orientation" value="unspecified" />
+   <preference name="orientation" value="default" />
     <preference name="fullscreen" value="true" />
     <preference name="android-versionCode" value="0.0.2" />
 	<preference name="target-device" value="tablet" />
@@ -76,7 +76,7 @@
     </platform>
 
 -<platform name="ios">
-<icon src="icon.png" />
+<icon src="www/res/icon/ios/icon.png" />
 <icon src="www/res/icon/ios/icon.png" width="57"   height="57"/>
 <icon src="www/res/icon/ios/icon@2x.png" width="114"   height="114"/>
 <icon src="www/res/icon/ios/icon-40.png" width="40"   height="40"/>
