@@ -1,7 +1,7 @@
 var lines = [];
 var buttons =[];
 var	lineColor = [];
-
+var android = "";
 window.onload =  setTimeout(startUp, 200);  	
  
 var cChar = "a";
@@ -268,8 +268,8 @@ function process() {
 }
 function getMediaURL(snd) {
 	var s = snd;
-	var x = device.platform.toLowerCase();
-	if (device.platform.toLowerCase() === 'android') {
+
+	if (android ==  'android') {
 		s =  "/android_asset/www/" + snd;
 	}
 	return  s;
