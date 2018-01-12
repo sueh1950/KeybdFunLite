@@ -267,8 +267,11 @@ function process() {
 	inBox.value = "";
 }
 function getMediaURL(snd) {
-	if(device.platform.toLowerCase() === "android") return "/android_asset/www/" + snd;
-		return  snd;
+	var s = snd;
+	if (device.platform.toLowerCase() == 'android') {
+		s =  "/android_asset/www/" + snd;
+	}
+	return  s;
 }
 function log (s) {
 var b=  document.getElementById("log");
