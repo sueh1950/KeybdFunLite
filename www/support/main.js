@@ -268,7 +268,8 @@ function process() {
 }
 function getMediaURL(snd) {
 	var s = snd;
-	if (device.platform.toLowerCase() == 'android') {
+	var x = device.platform.toLowerCase();
+	if (device.platform.toLowerCase() === 'android') {
 		s =  "/android_asset/www/" + snd;
 	}
 	return  s;
