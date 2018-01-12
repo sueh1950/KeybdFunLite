@@ -22,6 +22,7 @@
 
 	<plugin name="cordova-plugin-media" source="npm" spec="2.4.1" />
 	<plugin name="cordova-plugin-device" source="npm" spec="1.1.4"  />  
+	<plugin name="cordova-plugin-file" source="npm"   />  
 	
 <edit-config file="AndroidManifest.xml" target="/manifest/uses-permission[@android:name='android.permission.WRITE_EXTERNAL_STORAGE']" mode="merge">
        <uses-permission android:name="android.permission.STATUS_BAR" />
