@@ -43,12 +43,13 @@
 <!--android.permission.RECORD_AUDIO, android.permission.READ_PHONE_STATE-->
 
     <preference name="phonegap-version" value="cli-7.1.0" />	<!-- was cli-6.5.0-->
-	<preference name='pgb-builder-version' value='2' />   
+
    <preference name="orientation" value="default" />
     <preference name="fullscreen" value="true" />
     <preference name="android-versionCode" value="0.0.2" />
 	<preference name="target-device" value="tablet" />
 	
+<preference name="AndroidPersistentFileLocation" value="Internal" />		
     <preference name="android-build-tool" value="ant|gradle" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="android-targetSdkVersion" value="12" />
