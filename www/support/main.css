@@ -3,7 +3,7 @@ body {
 }
 
 div {
-    //background-color: white;
+
  }
   
 #table1 {
@@ -81,18 +81,18 @@ p {
    background-color: darkgrey; 
  }
  .right {text-align:right;
- width:50%;height:50%;"
+ width:50%;height:50%;
  }
  
  .left {text-align:left;
-  width:50%;height:50%;"
+  width:50%;height:50%;
   }
  
  input[type=text] {
    width: 20px;
 	height:10px;
 	maxlength:1;
-	autofocus;
+	autofocus:true;
 	color:yellow;
 	outline:none;
 }
