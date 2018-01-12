@@ -276,8 +276,8 @@ b.innerHTML = s;
 }
 function playSound(snd){
 
-	s = snd;
-	//******s = getMediaURL(snd); // add android prefix to filename if necessary
+	//s = snd;
+	s = getMediaURL(snd); // add android prefix to filename if necessary
 		
 	var my_media= new Media(s,
             // success callback
