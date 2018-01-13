@@ -18,11 +18,11 @@
       Sue Hossack
   </author>
     <content src="index.html" />
-<!--    <access origin="*" />-->
-
+<!--    <access origin="*" />--> 
+	
 	<plugin name="cordova-plugin-media" source="npm" spec="2.4.1" />
 	<plugin name="cordova-plugin-device" source="npm" spec="1.1.4"  />  
-	<plugin name="cordova-plugin-file" source="npm"   />  
+ 
 	
 <edit-config file="AndroidManifest.xml" target="/manifest/uses-permission[@android:name='android.permission.WRITE_EXTERNAL_STORAGE']" mode="merge">
        <uses-permission android:name="android.permission.STATUS_BAR" />
@@ -78,7 +78,7 @@
     </platform>
 
 -<platform name="ios">
-<icon src="www/res/icon/ios/icon.png" />
+<icon src="www/res/icon/ios/icon1024.png" width="1024" platform="ios" height="1024"/>
 <icon src="www/res/icon/ios/icon.png" width="57"   height="57"/>
 <icon src="www/res/icon/ios/icon@2x.png" width="114"   height="114"/>
 <icon src="www/res/icon/ios/icon-40.png" width="40"   height="40"/>
