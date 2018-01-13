@@ -1,9 +1,8 @@
+document.addEventListener("deviceready", startUp, false);
 var lines = [];
 var buttons =[];
 var	lineColor = [];
-var android = "";
-window.onload =  setTimeout(startUp, 200);  	
- 
+
 var cChar = "a";
 var cIndex;  //index to character in line
 var cLine = "";
@@ -267,12 +266,10 @@ function process() {
 	inBox.value = "";
 }
 function getMediaURL(snd) {
-	var s = snd;
-
-	if (android ==  'android') {
-		s =  "/android_asset/www/" + snd;
-	}
-	return  s;
+    if (device.platform.toLowerCase() === "android") {
+		snd =  "/android_asset/www/" + snd;
+    }
+	return  snd;
 }
 function log (s) {
 var b=  document.getElementById("log");
@@ -280,21 +277,22 @@ b.innerHTML = s;
 }
 function playSound(snd){
 
-	//s = snd;
-	s = getMediaURL(snd); // add android prefix to filename if necessary
-	try {	
-		var my_media= new Media(s,
-				// success callback
-				function () { //console.log("playAudio():Audio Success");
-				},
-				// error callback
-				function (err) { console.log("playAudio():Audio Error: " + err.code +":" + err.message); }
-		);
-		// Play audio 
-		my_media.play();
-		//release the object
-		setTimeout(function(){ my_media.release(); }, 4*1000);
-	} catch (err) {console.log("media error");}
+	s = getMediaURL(snd);  // add android prefix to filename if necessary
+
+	var my_media= new Media(s,
+            // success callback
+             function () { 
+				//console.log("playAudio():Audio Success"); 
+			 },
+            // error callback
+             function (err) { 
+				console.log("playAudio():Audio Error: " + err.code + err.message); 
+			 }
+    );
+	my_media.play();
+	//release the object
+	setTimeout(function(){ my_media.release(); }, 4*1000);
+
 }
 function soundKey(event){
 	var s=event.target.id; //= 'imgx'
